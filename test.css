@@ -1,0 +1,543 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-size: 0;
+}
+
+body {
+	height: 800px;
+	overflow: hidden;
+}
+
+@keyframes sunshining {
+	from {box-shadow: 0 0 20px 10px #f9ff54, 0 0 20px 10px #fff;}
+	50% {box-shadow: 0 0 30px 15px #fbff81, 0 0 40px 20px #fff;}
+	to {box-shadow: 0 0 20px 10px #f9ff54, 0 0 20px 10px #fff;}
+}
+
+.sky {
+	position: relative;
+	height: 350px;
+	background: #3ec3ff;
+	z-index: 0;
+}
+
+.sun {
+	position: absolute;
+	top: 40px;
+	left: 50%;
+	margin-left: -30px;
+	height: 60px;
+	width: 60px;
+	background: yellow;
+	border-radius: 30px;
+	box-shadow: 0 0 20px 10px #f9ff54;
+	animation: sunshining 4s infinite linear;
+}
+
+.sea {
+	position: relative;
+	height: 450px;
+	background: #646eff;
+	z-index: 0;
+}
+
+.wave4 {
+	position: absolute;
+	top: 50px;
+	z-index: 1;
+	left: 0;
+	right: 0;
+}
+
+.wave4 > div {
+	display: inline-block;
+	width: 2.5%;
+	height: 100px;
+	background: #535eff;
+}
+
+.wave4_4 {
+	position: absolute;
+	top: 50px;
+	right: 100%;
+	z-index: 1;
+	left: 0;
+	right: 0;
+}
+
+.wave4_4 > div {
+	display: inline-block;
+	width: 2.5%;
+	height: 100px;
+	background: #535eff;
+}
+
+.wave3 {
+	position: absolute;
+	top: 100px;
+	z-index: 2;
+	left: 0;
+	right: 0;
+}
+
+.wave3 > div {
+	display: inline-block;
+	width: 5%;
+	height: 125px;
+	background: #3543ff;
+}
+
+.wave3_3 {
+	position: absolute;
+	top: 100px;
+	right: 100%;
+	z-index: 2;
+	left: 0;
+	right: 0;
+}
+
+.wave3_3 > div {
+	display: inline-block;
+	width: 5%;
+	height: 125px;
+	background: #3543ff;
+}
+
+.wave2 {
+	position: absolute;
+	top: 175px;
+	z-index: 3;
+	left: 0;
+	right: 0;
+}
+
+.wave2 > div {
+	display: inline-block;
+	width: 6.25%;
+	height: 175px;
+	background: #0011ff;
+}
+
+.wave2_2 {
+	position: absolute;
+	top: 175px;
+	right: 100%;
+	z-index: 3;
+	left: 0;
+	right: 0;
+}
+
+.wave2_2 > div {
+	display: inline-block;
+	width: 6.25%;
+	height: 175px;
+	background: #0011ff;
+}
+
+.wave1 {
+	position: absolute;
+	top: 300px;
+	z-index: 4;
+	left: 0;
+	right: 0;
+}
+.wave1_1 {
+	position: absolute;
+	top: 300px;
+	right: 100%;
+	z-index: 4;
+	left: 0;
+	right: 0;
+}
+
+.wave1 > div {
+	display: inline-block;
+	width: 10%;
+	height: 200px;
+	background: #000ed1;
+}
+
+.wave1_1 > div {
+	display: inline-block;
+	width: 10%;
+	height: 200px;
+	background: #000ed1;
+}
+
+.wave0 {
+	position: absolute;
+	top: 430px;
+	height: 100px;
+	width: 100%;
+	z-index: 5;
+	left: 0;
+	right: 0;
+	background: #000ed1;
+}
+
+@keyframes fourleft {
+	from {transform: skewY(0deg); transform-origin: 50% 50%;}
+	25% {transform: skewY(8deg); transform-origin: 50% 50%;}
+	75% {transform: skewY(-8deg); transform-origin: 50% 50%;}
+	to {transform: skewY(0deg); transform-origin: 50% 50%;}
+}
+
+@keyframes fourright {
+	from {transform: skewY(0deg); transform-origin: 50% 50%;}
+	25% {transform: skewY(-8deg); transform-origin: 50% 50%;}
+	75% {transform: skewY(8deg); transform-origin: 50% 50%;}
+	to {transform: skewY(0deg); transform-origin: 50% 50%;}
+}
+
+@keyframes threeleft {
+	from {transform: skewY(0deg); transform-origin: 50% 50%;}
+	25% {transform: skewY(10deg); transform-origin: 50% 50%;}
+	75% {transform: skewY(-10deg); transform-origin: 50% 50%;}
+	to {transform: skewY(0deg); transform-origin: 50% 50%;}
+}
+
+@keyframes threeright {
+	from {transform: skewY(0deg); transform-origin: 50% 50%;}
+	25% {transform: skewY(-10deg); transform-origin: 50% 50%;}
+	75% {transform: skewY(10deg); transform-origin: 50% 50%;}
+	to {transform: skewY(0deg); transform-origin: 50% 50%;}
+}
+
+@keyframes twoleft {
+	from {transform: skewY(0deg); transform-origin: 50% 50%;}
+	25% {transform: skewY(13deg); transform-origin: 50% 50%;}
+	75% {transform: skewY(-13deg); transform-origin: 50% 50%;}
+	to {transform: skewY(0deg); transform-origin: 50% 50%;}
+}
+
+@keyframes tworight {
+	from {transform: skewY(0deg); transform-origin: 50% 50%;}
+	25% {transform: skewY(-13deg); transform-origin: 50% 50%;}
+	75% {transform: skewY(13deg); transform-origin: 50% 50%;}
+	to {transform: skewY(0deg); transform-origin: 50% 50%;}
+}
+
+@keyframes oneleft {
+	from {transform: skewY(0deg); transform-origin: 50% 50%;}
+	25% {transform: skewY(15deg); transform-origin: 50% 50%;}
+	75% {transform: skewY(-15deg); transform-origin: 50% 50%;}
+	to {transform: skewY(0deg); transform-origin: 50% 50%;}
+}
+
+@keyframes oneright {
+	from {transform: skewY(0deg); transform-origin: 50% 50%;}
+	25% {transform: skewY(-15deg); transform-origin: 50% 50%;}
+	75% {transform: skewY(15deg); transform-origin: 50% 50%;}
+	to {transform: skewY(0deg); transform-origin: 50% 50%;}
+}
+
+.wave4_left {
+	animation: fourleft 1.7s infinite linear;
+}
+
+.wave4_right {
+	animation: fourright 1.7s infinite linear;
+}
+
+.wave3_left {
+	animation: threeleft 1.7s infinite linear;
+}
+
+.wave3_right {
+	animation: threeright 1.7s infinite linear;
+}
+
+.wave2_left {
+	animation: twoleft 1.7s infinite linear;
+}
+
+.wave2_right {
+	animation: tworight 1.7s infinite linear;
+}
+
+.wave1_left {
+	animation: oneleft 1.7s infinite linear;
+}
+
+.wave1_right {
+	animation: oneright 1.7s infinite linear;
+}
+
+@keyframes move {
+	from {transform: translateX(0%);}
+	to {transform: translateX(100%);}
+}
+@keyframes movew {
+	from {transform: translateX(-100%);}
+	to {transform: translateX(0%);}
+}
+
+.wave1 {
+	animation: move 12s infinite linear;
+}
+
+.wave1_1 {
+	animation: movew 12s infinite linear;
+}
+
+.wave2 {
+	animation: move 22s infinite linear;
+}
+
+.wave2_2 {
+	animation: movew 22s infinite linear;
+}
+
+.wave3 {
+	animation: move 32s infinite linear;
+}
+
+.wave3_3 {
+	animation: movew 32s infinite linear;
+}
+
+.wave4 {
+	animation: move 42s infinite linear;
+}
+
+.wave4_4 {
+	animation: movew 42s infinite linear;
+}
+
+
+/*=============== Styles for ship =================*/
+.ship {
+	position: absolute;
+	bottom: 330px;
+	z-index: 1;
+}
+
+.ship_body {
+	position: absolute;
+	bottom: 0;
+	width: 300px;
+	height: 60px;
+	background: #a16408;
+	border-bottom-left-radius: 15px 50px;
+	border-bottom-right-radius: 150px 60px;
+	border: 3px solid #6b4000;
+	border-top: 35px solid #8b5401;
+}
+
+.machta {
+	position: absolute;
+	width: 8px;
+	height: 200px;
+	left: 120px;
+	bottom: 60px;
+	background: #58270c;
+}
+
+.parus1 {
+	position: absolute;
+	width: 100px;
+	height: 130px;
+	left: 20px;
+	bottom: 80px;
+	overflow: hidden;
+}
+
+.parus1 > div {
+	height: 130px;
+	width: 100px;
+	transform: skewX(-36deg);
+	transform-origin: 50% 100%;
+	background: #f00;
+}
+
+.parus2 {
+	position: absolute;
+	width: 180px;
+	height: 180px;
+	left: 128px;
+	bottom: 80px;
+	overflow: hidden;
+}
+
+.parus2 > div {
+	height: 180px;
+	width: 180px;
+	transform: skewX(45deg);
+	transform-origin: 50% 100%;
+	background: #f00;
+}
+
+.colours {
+	position: absolute;
+	width: 70px;
+	height: 30px;
+	left: 50px;
+	bottom: 220px;
+	overflow: hidden;
+}
+
+.colours_white {
+	height: 10px;
+	width: 70px;
+	background: #fff;
+}
+
+.colours_blue {
+	height: 10px;
+	width: 70px;
+	background: #00f;
+}
+
+.colours_red {
+	height: 10px;
+	width: 70px;
+	background: #f00;
+}
+
+@keyframes shiprotate {
+	from {transform: rotate(0deg); transform-origin: 20% 100%;}
+	25% {transform: rotate(2deg); transform-origin: 20% 100%;}
+	75% {transform: rotate(-4deg); transform-origin: 20% 100%;}
+	to {transform: rotate(0deg); transform-origin: 20% 100%;}
+}
+
+@keyframes shipmove {
+	from {transform: translateX(-310px);}
+	to {transform: translateX(110vw);}
+}
+
+.ship {
+	animation: shipmove 20s infinite linear;
+}
+
+.ship_container {
+	animation: shiprotate 2s infinite linear;
+}
+
+/*============ Sky =============*/
+
+.oblako {
+	position: absolute;
+}
+
+.o1 {top: 50px; left: -100px;}
+.o2 {top: 100px; left: -100px;}
+.o3 {top: 150px; left: -100px;}
+.o4 {top: 200px; left: -100px;}
+.o5 {top: 250px; left: -100px;}
+
+.ob1 {
+	width: 50px;
+	height: 50px;
+	box-shadow: 0 0 10px 8px #eee, 0 5px 10px #ccc;
+	position: absolute;
+	left: 20px;
+	top: 10px;
+	border-radius: 25px;
+	background: #fff;
+}
+
+.ob2 {
+	width: 40px;
+	height: 40px;
+	box-shadow: 0 0 10px 8px #eee, 0 5px 10px #ccc;
+	position: absolute;
+	left: 90px;
+	top: 20px;
+	border-radius: 20px;
+	background: #fff;
+}
+
+.ob3 {
+	width: 30px;
+	height: 30px;
+	box-shadow: 0 0 10px 8px #eee, 0 5px 10px #ccc;
+	position: absolute;
+	top: 30px;
+	left: 120px;
+	border-radius: 15px;
+	background: #fff;
+}
+
+.ob4 {
+	width: 20px;
+	height: 20px;
+	box-shadow: 0 0 10px 8px #eee, 0 5px 10px #ccc;
+	position: absolute;
+	top: 40px;
+	border-radius: 10px;
+	background: #fff;
+}
+
+.ob5 {
+	width: 60px;
+	height: 60px;
+	box-shadow: 0 0 10px 8px #eee, 0 5px 10px #ccc;
+	position: absolute;
+	left: 50px;
+	border-radius: 30px;
+	background: #fff;
+}
+
+@keyframes skymove {
+	from {transform: translateX(-200px);}
+	to {transform: translateX(110vw);}
+}
+
+@keyframes skyscalefirst {
+	from {transform: scale(1);}
+	to {transform: scale(1);}
+}
+@keyframes skyscalesecond {
+	from {transform: scale(0.8);}
+	to {transform: scale(0.8);}
+}
+@keyframes skyscalethird {
+	from {transform: scale(0.6);}
+	to {transform: scale(0.6);}
+}
+@keyframes skyscalefourth {
+	from {transform: scale(0.4);}
+	to {transform: scale(0.4);}
+}
+@keyframes skyscalefifth {
+	from {transform: scale(0.2);}
+	to {transform: scale(0.2);}
+}
+
+.o1 {
+	animation: skymove 40s infinite linear;
+}
+.o_container1 {
+	animation: skyscalefirst 40s infinite linear;
+}
+
+.o2 {
+	animation: skymove 60s infinite linear;
+}
+.o_container2 {
+	animation: skyscalesecond 60s infinite linear;
+}
+
+.o3 {
+	animation: skymove 80s infinite linear;
+}
+.o_container3 {
+	animation: skyscalethird 80s infinite linear;
+}
+
+.o4 {
+	animation: skymove 100s infinite linear;
+}
+.o_container4 {
+	animation: skyscalefourth 100s infinite linear;
+}
+
+.o5 {
+	animation: skymove 120s infinite linear;
+}
+.o_container5 {
+	animation: skyscalefifth 120s infinite linear;
+}
